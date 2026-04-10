@@ -18,7 +18,7 @@ jobs:
           echo "www_branch_count=$(git ls-remote --heads origin "refs/heads/meta-www" | wc -l)" >> "$GITHUB_OUTPUT"
           echo "fbsource_branch_count=$(git ls-remote --heads origin "refs/heads/meta-fbsource" | wc -l)" >> "$GITHUB_OUTPUT"
       - name: Download and unzip artifacts
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           CIRCLECI_TOKEN: ${{secrets.CIRCLECI_TOKEN_DIFFTRAIN}}
         with:
